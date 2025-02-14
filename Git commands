@@ -1,0 +1,149 @@
+root@ip-172-31-45-157 ~]# git --version
+
+git version 2.40.1
+
+[root@ip-172-31-45-157 ~]# mkdir project
+
+[root@ip-172-31-45-157 ~]# cd project/
+
+[root@ip-172-31-45-157 project]# git init .
+
+Initialized empty Git repository in /root/project/.git/
+
+[root@ip-172-31-45-157 project]# vim myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# git add myindex.html
+
+[root@ip-172-31-45-157 project]# git commit -m "html-code"
+
+[root@ip-172-31-45-157 project]# vim myindex.html
+
+[root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# git add myindex.html
+
+[root@ip-172-31-45-157 project]# git commit -m "MC2"
+
+[root@ip-172-31-45-157 project]# git log --oneline
+
+870ee63 (HEAD -> master) MC2
+
+d17578b html-code
+
+[root@ip-172-31-45-157 project]# git branch feature
+
+[root@ip-172-31-45-157 project]# git checkout feature
+
+Switched to branch 'feature'
+
+[root@ip-172-31-45-157 project]# ls -ltr
+
+total 4
+
+-rw-r--r-- 1 root root 126 Dec 18 16:50 myindex.html
+
+[root@ip-172-31-45-157 project]# vi myindex.html
+
+[root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+<h4> THIS IS FEATURE BRANCH </h4>
+
+<h6> new data added by feature branch </h6>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# git add myindex.html
+
+[root@ip-172-31-45-157 project]# git commit -m "FC1"
+
+[root@ip-172-31-45-157 project]# git checkout master
+
+Switched to branch 'master'
+
+[root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# vi myindex.html
+
+[root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+<h5> THIS IS MASTER BRANCH DATA</h5>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# git add myindex.html
+
+[root@ip-172-31-45-157 project]# git commit -m "MC3”
+
+[root@ip-172-31-45-157 project]# git merge feature
+
+Auto-merging myindex.html
+
+CONFLICT (content): Merge conflict in myindex.html
+
+Automatic merge failed; fix conflicts and then commit the result.
+
+[root@ip-172-31-45-157 project]# git mergetool
