@@ -147,3 +147,50 @@ CONFLICT (content): Merge conflict in myindex.html
 Automatic merge failed; fix conflicts and then commit the result.
 
 [root@ip-172-31-45-157 project]# git mergetool
+root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+<h5> THIS IS MASTER BRANCH DATA</h5>
+
+<h4> THIS IS FEATURE BRANCH </h4>
+
+<h6> new data added by feature branch </h6>
+
+</body>
+
+</html>
+
+[root@ip-172-31-45-157 project]# git add myindex.html
+
+[root@ip-172-31-45-157 project]# git commit -m "resolve-error"
+
+[root@ip-172-31-45-157 project]# cat myindex.html
+
+<html>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<b> new data  added in master branch </b>
+
+<h5> THIS IS MASTER BRANCH DATA</h5>
+
+<h4> THIS IS FEATURE BRANCH </h4>
+
+<h6> new data added by feature branch </h6>
+
+</body>
+
+</html>
